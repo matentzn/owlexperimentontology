@@ -28,6 +28,9 @@
         <Class IRI="#AssertionMetric"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#AtomicDecomposition"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#AtomicDecompositionMetric"/>
     </Declaration>
     <Declaration>
@@ -41,6 +44,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="#Calculation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Classification"/>
     </Declaration>
     <Declaration>
         <Class IRI="#ClassificationDurationMetric"/>
@@ -61,10 +67,16 @@
         <Class IRI="#Configuration"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Consistency"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Corpus"/>
     </Declaration>
     <Declaration>
         <Class IRI="#DatatypeMetric"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Decomposition"/>
     </Declaration>
     <Declaration>
         <Class IRI="#DecompositionMetric"/>
@@ -74,6 +86,12 @@
     </Declaration>
     <Declaration>
         <Class IRI="#DelegateReasonerMetadata"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DerivedMetric"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DirectMetric"/>
     </Declaration>
     <Declaration>
         <Class IRI="#DirectSubsumptionTestCountMetric"/>
@@ -125,6 +143,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="#LogicalConstructMetric"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MOReDecomposition"/>
     </Declaration>
     <Declaration>
         <Class IRI="#MOWLCorp"/>
@@ -187,10 +208,16 @@
         <Class IRI="#PercentageDifference"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Process"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#ProfileMetric"/>
     </Declaration>
     <Declaration>
         <Class IRI="#RatioMetric"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Realisation"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Reasoner"/>
@@ -206,6 +233,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="#ReasonerPhaseDurationMetric"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Reasoning"/>
     </Declaration>
     <Declaration>
         <Class IRI="#ReasoningMetric"/>
@@ -304,7 +334,13 @@
         <ObjectProperty IRI="#hasValue"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#investigatesProcess"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#isConfiguredBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isInvestigatedBy"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#isMeasurementOf"/>
@@ -534,6 +570,10 @@
         <Class IRI="#AxiomMetric"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#AtomicDecomposition"/>
+        <Class IRI="#Decomposition"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#AtomicDecompositionMetric"/>
         <Class IRI="#DecompositionMetric"/>
     </SubClassOf>
@@ -616,6 +656,10 @@
         </DataHasValue>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Classification"/>
+        <Class IRI="#Reasoning"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#ClassificationDurationMetric"/>
         <Class IRI="#DurationMetric"/>
     </SubClassOf>
@@ -657,6 +701,10 @@
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Consistency"/>
+        <Class IRI="#Reasoning"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Corpus"/>
         <Class IRI="#OntologySet"/>
     </SubClassOf>
@@ -694,6 +742,10 @@
         <Class IRI="#OntologyMetric"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Decomposition"/>
+        <Class IRI="#Process"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#DecompositionMetric"/>
         <Class IRI="#OntologyMetric"/>
     </SubClassOf>
@@ -704,6 +756,14 @@
     <SubClassOf>
         <Class IRI="#DelegateReasonerMetadata"/>
         <Class IRI="#ReasonerMetadata"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DerivedMetric"/>
+        <Class IRI="#Metric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DirectMetric"/>
+        <Class IRI="#Metric"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#DirectSubsumptionTestCountMetric"/>
@@ -729,6 +789,13 @@
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#hasSample"/>
             <Class IRI="#Sample"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Experiment"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#investigatesProcess"/>
+            <Class IRI="#Process"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -896,6 +963,10 @@
             <DataProperty IRI="#hasName"/>
             <Literal datatypeIRI="&xsd;string">MODCL_TS</Literal>
         </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MOReDecomposition"/>
+        <Class IRI="#Decomposition"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#MOWLCorp"/>
@@ -1066,6 +1137,10 @@
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Realisation"/>
+        <Class IRI="#Reasoning"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Reasoner"/>
         <DataSomeValuesFrom>
             <DataProperty IRI="#hasName"/>
@@ -1086,6 +1161,10 @@
     <SubClassOf>
         <Class IRI="#ReasonerPhaseDurationMetric"/>
         <Class IRI="#DurationMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Reasoning"/>
+        <Class IRI="#Process"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#ReasoningMetric"/>
@@ -5350,6 +5429,10 @@
         <ObjectProperty IRI="#hasOntology"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isInvestigatedBy"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
     <InverseObjectProperties>
         <ObjectProperty IRI="#hasConfiguration"/>
         <ObjectProperty IRI="#isConfiguredBy"/>
@@ -5371,12 +5454,16 @@
         <ObjectProperty IRI="#isReasonerOf"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#isResultOf"/>
         <ObjectProperty IRI="#hasResult"/>
+        <ObjectProperty IRI="#isResultOf"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="#hasRun"/>
         <ObjectProperty IRI="#isRunOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#isInvestigatedBy"/>
+        <ObjectProperty IRI="#investigatesProcess"/>
     </InverseObjectProperties>
     <SubDataPropertyOf>
         <DataProperty IRI="#hasIntegerValue"/>
