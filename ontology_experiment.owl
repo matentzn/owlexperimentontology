@@ -37,6 +37,12 @@
         <Class IRI="#AxiomMetric"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#AxiomTypeCountMetric"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AxiomTypeExistsMetric"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#AxiomTypeMetric"/>
     </Declaration>
     <Declaration>
@@ -70,6 +76,9 @@
         <Class IRI="#Consistency"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#ConstructExistsMetric"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Corpus"/>
     </Declaration>
     <Declaration>
@@ -86,6 +95,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="#DelegateReasonerMetadata"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Deprecated"/>
     </Declaration>
     <Declaration>
         <Class IRI="#DerivedMetric"/>
@@ -136,6 +148,12 @@
         <Class IRI="#FoldChange"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#GeneralAxiomMetric"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GeneralAxiomTypeMetric"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#HermiT"/>
     </Declaration>
     <Declaration>
@@ -181,6 +199,9 @@
         <Class IRI="#Ontology"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#OntologyInclMetric"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#OntologyMeasurement"/>
     </Declaration>
     <Declaration>
@@ -188,6 +209,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="#OntologyMetric"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#OntologyRootMetric"/>
     </Declaration>
     <Declaration>
         <Class IRI="#OntologySet"/>
@@ -275,6 +299,12 @@
     </Declaration>
     <Declaration>
         <Class IRI="#VMConfiguration"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ViolationCountMetric"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ViolationExistMetric"/>
     </Declaration>
     <Declaration>
         <Class IRI="#ViolationMetric"/>
@@ -582,6 +612,14 @@
         <Class IRI="#OntologyMetric"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#AxiomTypeCountMetric"/>
+        <Class IRI="#AxiomTypeMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AxiomTypeExistsMetric"/>
+        <Class IRI="#AxiomTypeMetric"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#AxiomTypeMetric"/>
         <Class IRI="#AxiomMetric"/>
     </SubClassOf>
@@ -705,6 +743,10 @@
         <Class IRI="#Reasoning"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#ConstructExistsMetric"/>
+        <Class IRI="#OntologyMetric"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Corpus"/>
         <Class IRI="#OntologySet"/>
     </SubClassOf>
@@ -756,6 +798,10 @@
     <SubClassOf>
         <Class IRI="#DelegateReasonerMetadata"/>
         <Class IRI="#ReasonerMetadata"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Deprecated"/>
+        <Class IRI="#OntologyMetric"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#DerivedMetric"/>
@@ -885,6 +931,14 @@
     <SubClassOf>
         <Class IRI="#FoldChange"/>
         <Class IRI="#Calculation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GeneralAxiomMetric"/>
+        <Class IRI="#AxiomMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GeneralAxiomTypeMetric"/>
+        <Class IRI="#AxiomTypeMetric"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#HermiT"/>
@@ -1050,12 +1104,20 @@
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#OntologyInclMetric"/>
+        <Class IRI="#OntologyMetric"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#OntologyMetadataMetric"/>
         <Class IRI="#OntologyMetric"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#OntologyMetric"/>
         <Class IRI="#Metric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#OntologyRootMetric"/>
+        <Class IRI="#OntologyMetric"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#OtherDurationMetric"/>
@@ -1275,12 +1337,20 @@
         <Class IRI="#Configuration"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#ViolationCountMetric"/>
+        <Class IRI="#ViolationMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ViolationExistMetric"/>
+        <Class IRI="#ViolationMetric"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#ViolationMetric"/>
         <Class IRI="#OntologyMetric"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#abox_size"/>
-        <Class IRI="#AxiomMetric"/>
+        <Class IRI="#GeneralAxiomMetric"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#abox_size"/>
@@ -1298,7 +1368,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#abox_size_incl"/>
-        <Class IRI="#AxiomMetric"/>
+        <Class IRI="#GeneralAxiomMetric"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#abox_size_incl"/>
@@ -1657,8 +1727,96 @@
         </DataHasValue>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#ax_o_abox_size"/>
+        <Class IRI="#Deprecated"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ax_o_abox_size"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">ax_o_abox_size</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ax_o_abox_size_incl"/>
+        <Class IRI="#Deprecated"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ax_o_abox_size_incl"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">ax_o_abox_size_incl</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ax_o_logical_axiom_count"/>
+        <Class IRI="#Deprecated"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ax_o_logical_axiom_count"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">ax_o_logical_axiom_count</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ax_o_logical_axiom_count_incl"/>
+        <Class IRI="#Deprecated"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ax_o_logical_axiom_count_incl"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">ax_o_logical_axiom_count_incl</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ax_o_rule_ct"/>
+        <Class IRI="#Deprecated"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ax_o_rule_ct"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">ax_o_rule_ct</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ax_o_rule_ct_incl"/>
+        <Class IRI="#Deprecated"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ax_o_rule_ct_incl"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">ax_o_rule_ct_incl</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ax_o_tbox_size"/>
+        <Class IRI="#Deprecated"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ax_o_tbox_size"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">ax_o_tbox_size</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ax_o_tbox_size_incl"/>
+        <Class IRI="#Deprecated"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ax_o_tbox_size_incl"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">ax_o_tbox_size_incl</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#axiom_count"/>
-        <Class IRI="#AxiomMetric"/>
+        <Class IRI="#GeneralAxiomMetric"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#axiom_count"/>
@@ -1676,7 +1834,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#axiom_count_incl"/>
-        <Class IRI="#AxiomMetric"/>
+        <Class IRI="#GeneralAxiomMetric"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#axiom_count_incl"/>
@@ -1694,7 +1852,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#axiom_type_count"/>
-        <Class IRI="#AxiomTypeMetric"/>
+        <Class IRI="#GeneralAxiomTypeMetric"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#axiom_type_count"/>
@@ -1705,7 +1863,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#axiom_type_count_incl"/>
-        <Class IRI="#AxiomTypeMetric"/>
+        <Class IRI="#GeneralAxiomTypeMetric"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#axiom_type_count_incl"/>
@@ -1716,7 +1874,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#axiom_types"/>
-        <Class IRI="#AxiomTypeMetric"/>
+        <Class IRI="#GeneralAxiomTypeMetric"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#axiom_types"/>
@@ -1727,13 +1885,1377 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#axiom_types_incl"/>
-        <Class IRI="#AxiomTypeMetric"/>
+        <Class IRI="#GeneralAxiomTypeMetric"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#axiom_types_incl"/>
         <DataHasValue>
             <DataProperty IRI="#hasName"/>
             <Literal datatypeIRI="&xsd;string">axiom_types_incl</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_AsymmetricObjectProperty"/>
+        <Class IRI="#AxiomTypeExistsMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_AsymmetricObjectProperty"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axt_AsymmetricObjectProperty</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_ClassAssertion"/>
+        <Class IRI="#AxiomTypeExistsMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_ClassAssertion"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axt_ClassAssertion</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_DataPropertyAssertion"/>
+        <Class IRI="#AxiomTypeExistsMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_DataPropertyAssertion"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axt_DataPropertyAssertion</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_DataPropertyDomain"/>
+        <Class IRI="#AxiomTypeExistsMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_DataPropertyDomain"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axt_DataPropertyDomain</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_DataPropertyRange"/>
+        <Class IRI="#AxiomTypeExistsMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_DataPropertyRange"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axt_DataPropertyRange</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_DatatypeDefinition"/>
+        <Class IRI="#AxiomTypeExistsMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_DatatypeDefinition"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axt_DatatypeDefinition</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_DifferentIndividuals"/>
+        <Class IRI="#AxiomTypeExistsMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_DifferentIndividuals"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axt_DifferentIndividuals</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_DisjointClasses"/>
+        <Class IRI="#AxiomTypeExistsMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_DisjointClasses"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axt_DisjointClasses</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_DisjointObjectProperties"/>
+        <Class IRI="#AxiomTypeExistsMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_DisjointObjectProperties"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axt_DisjointObjectProperties</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_DisjointUnion"/>
+        <Class IRI="#AxiomTypeExistsMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_DisjointUnion"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axt_DisjointUnion</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_EquivalentClasses"/>
+        <Class IRI="#AxiomTypeExistsMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_EquivalentClasses"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axt_EquivalentClasses</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_EquivalentDataProperties"/>
+        <Class IRI="#AxiomTypeExistsMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_EquivalentDataProperties"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axt_EquivalentDataProperties</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_EquivalentObjectProperties"/>
+        <Class IRI="#AxiomTypeExistsMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_EquivalentObjectProperties"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axt_EquivalentObjectProperties</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_FunctionalDataProperty"/>
+        <Class IRI="#AxiomTypeExistsMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_FunctionalDataProperty"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axt_FunctionalDataProperty</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_FunctionalObjectProperty"/>
+        <Class IRI="#AxiomTypeExistsMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_FunctionalObjectProperty"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axt_FunctionalObjectProperty</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_HasKey"/>
+        <Class IRI="#AxiomTypeExistsMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_HasKey"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axt_HasKey</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_InverseFunctionalObjectProperty"/>
+        <Class IRI="#AxiomTypeExistsMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_InverseFunctionalObjectProperty"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axt_InverseFunctionalObjectProperty</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_InverseObjectProperties"/>
+        <Class IRI="#AxiomTypeExistsMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_InverseObjectProperties"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axt_InverseObjectProperties</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_IrrefexiveObjectProperty"/>
+        <Class IRI="#AxiomTypeExistsMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_IrrefexiveObjectProperty"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axt_IrrefexiveObjectProperty</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_ObjectPropertyAssertion"/>
+        <Class IRI="#AxiomTypeExistsMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_ObjectPropertyAssertion"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axt_ObjectPropertyAssertion</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_ObjectPropertyDomain"/>
+        <Class IRI="#AxiomTypeExistsMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_ObjectPropertyDomain"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axt_ObjectPropertyDomain</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_ObjectPropertyRange"/>
+        <Class IRI="#AxiomTypeExistsMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_ObjectPropertyRange"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axt_ObjectPropertyRange</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_ReflexiveObjectProperty"/>
+        <Class IRI="#AxiomTypeExistsMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_ReflexiveObjectProperty"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axt_ReflexiveObjectProperty</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_Rule"/>
+        <Class IRI="#AxiomTypeExistsMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_Rule"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axt_Rule</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_SameIndividual"/>
+        <Class IRI="#AxiomTypeExistsMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_SameIndividual"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axt_SameIndividual</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_SubClassOf"/>
+        <Class IRI="#AxiomTypeExistsMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_SubClassOf"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axt_SubClassOf</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_SubDataPropertyOf"/>
+        <Class IRI="#AxiomTypeExistsMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_SubDataPropertyOf"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axt_SubDataPropertyOf</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_SubObjectPropertyOf"/>
+        <Class IRI="#AxiomTypeExistsMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_SubObjectPropertyOf"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axt_SubObjectPropertyOf</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_SubPropertyChainOf"/>
+        <Class IRI="#AxiomTypeExistsMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_SubPropertyChainOf"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axt_SubPropertyChainOf</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_SymmetricObjectProperty"/>
+        <Class IRI="#AxiomTypeExistsMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_SymmetricObjectProperty"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axt_SymmetricObjectProperty</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_TransitiveObjectProperty"/>
+        <Class IRI="#AxiomTypeExistsMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_TransitiveObjectProperty"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axt_TransitiveObjectProperty</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_incl_AsymmetricObjectProperty"/>
+        <Class IRI="#AxiomTypeExistsMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_incl_AsymmetricObjectProperty"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axt_incl_AsymmetricObjectProperty</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_incl_ClassAssertion"/>
+        <Class IRI="#AxiomTypeExistsMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_incl_ClassAssertion"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axt_incl_ClassAssertion</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_incl_DataPropertyAssertion"/>
+        <Class IRI="#AxiomTypeExistsMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_incl_DataPropertyAssertion"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axt_incl_DataPropertyAssertion</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_incl_DataPropertyDomain"/>
+        <Class IRI="#AxiomTypeExistsMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_incl_DataPropertyDomain"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axt_incl_DataPropertyDomain</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_incl_DataPropertyRange"/>
+        <Class IRI="#AxiomTypeExistsMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_incl_DataPropertyRange"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axt_incl_DataPropertyRange</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_incl_DatatypeDefinition"/>
+        <Class IRI="#AxiomTypeExistsMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_incl_DatatypeDefinition"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axt_incl_DatatypeDefinition</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_incl_DifferentIndividuals"/>
+        <Class IRI="#AxiomTypeExistsMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_incl_DifferentIndividuals"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axt_incl_DifferentIndividuals</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_incl_DisjointClasses"/>
+        <Class IRI="#AxiomTypeExistsMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_incl_DisjointClasses"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axt_incl_DisjointClasses</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_incl_DisjointObjectProperties"/>
+        <Class IRI="#AxiomTypeExistsMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_incl_DisjointObjectProperties"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axt_incl_DisjointObjectProperties</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_incl_DisjointUnion"/>
+        <Class IRI="#AxiomTypeExistsMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_incl_DisjointUnion"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axt_incl_DisjointUnion</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_incl_EquivalentClasses"/>
+        <Class IRI="#AxiomTypeExistsMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_incl_EquivalentClasses"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axt_incl_EquivalentClasses</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_incl_EquivalentDataProperties"/>
+        <Class IRI="#AxiomTypeExistsMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_incl_EquivalentDataProperties"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axt_incl_EquivalentDataProperties</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_incl_EquivalentObjectProperties"/>
+        <Class IRI="#AxiomTypeExistsMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_incl_EquivalentObjectProperties"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axt_incl_EquivalentObjectProperties</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_incl_FunctionalDataProperty"/>
+        <Class IRI="#AxiomTypeExistsMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_incl_FunctionalDataProperty"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axt_incl_FunctionalDataProperty</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_incl_FunctionalObjectProperty"/>
+        <Class IRI="#AxiomTypeExistsMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_incl_FunctionalObjectProperty"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axt_incl_FunctionalObjectProperty</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_incl_HasKey"/>
+        <Class IRI="#AxiomTypeExistsMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_incl_HasKey"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axt_incl_HasKey</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_incl_InverseFunctionalObjectProperty"/>
+        <Class IRI="#AxiomTypeExistsMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_incl_InverseFunctionalObjectProperty"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axt_incl_InverseFunctionalObjectProperty</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_incl_InverseObjectProperties"/>
+        <Class IRI="#AxiomTypeExistsMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_incl_InverseObjectProperties"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axt_incl_InverseObjectProperties</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_incl_IrrefexiveObjectProperty"/>
+        <Class IRI="#AxiomTypeExistsMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_incl_IrrefexiveObjectProperty"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axt_incl_IrrefexiveObjectProperty</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_incl_ObjectPropertyAssertion"/>
+        <Class IRI="#AxiomTypeExistsMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_incl_ObjectPropertyAssertion"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axt_incl_ObjectPropertyAssertion</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_incl_ObjectPropertyDomain"/>
+        <Class IRI="#AxiomTypeExistsMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_incl_ObjectPropertyDomain"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axt_incl_ObjectPropertyDomain</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_incl_ObjectPropertyRange"/>
+        <Class IRI="#AxiomTypeExistsMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_incl_ObjectPropertyRange"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axt_incl_ObjectPropertyRange</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_incl_ReflexiveObjectProperty"/>
+        <Class IRI="#AxiomTypeExistsMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_incl_ReflexiveObjectProperty"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axt_incl_ReflexiveObjectProperty</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_incl_Rule"/>
+        <Class IRI="#AxiomTypeExistsMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_incl_Rule"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axt_incl_Rule</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_incl_SameIndividual"/>
+        <Class IRI="#AxiomTypeExistsMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_incl_SameIndividual"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axt_incl_SameIndividual</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_incl_SubClassOf"/>
+        <Class IRI="#AxiomTypeExistsMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_incl_SubClassOf"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axt_incl_SubClassOf</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_incl_SubDataPropertyOf"/>
+        <Class IRI="#AxiomTypeExistsMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_incl_SubDataPropertyOf"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axt_incl_SubDataPropertyOf</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_incl_SubObjectPropertyOf"/>
+        <Class IRI="#AxiomTypeExistsMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_incl_SubObjectPropertyOf"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axt_incl_SubObjectPropertyOf</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_incl_SubPropertyChainOf"/>
+        <Class IRI="#AxiomTypeExistsMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_incl_SubPropertyChainOf"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axt_incl_SubPropertyChainOf</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_incl_SymmetricObjectProperty"/>
+        <Class IRI="#AxiomTypeExistsMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_incl_SymmetricObjectProperty"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axt_incl_SymmetricObjectProperty</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_incl_TransitiveObjectProperty"/>
+        <Class IRI="#AxiomTypeExistsMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axt_incl_TransitiveObjectProperty"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axt_incl_TransitiveObjectProperty</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_asymmetricobjectproperty"/>
+        <Class IRI="#AxiomTypeCountMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_asymmetricobjectproperty"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axtct_asymmetricobjectproperty</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_classassertion"/>
+        <Class IRI="#AxiomTypeCountMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_classassertion"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axtct_classassertion</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_datapropertyassertion"/>
+        <Class IRI="#AxiomTypeCountMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_datapropertyassertion"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axtct_datapropertyassertion</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_datapropertydomain"/>
+        <Class IRI="#AxiomTypeCountMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_datapropertydomain"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axtct_datapropertydomain</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_datapropertyrange"/>
+        <Class IRI="#AxiomTypeCountMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_datapropertyrange"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axtct_datapropertyrange</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_datatypedefinition"/>
+        <Class IRI="#AxiomTypeCountMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_datatypedefinition"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axtct_datatypedefinition</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_differentindividuals"/>
+        <Class IRI="#AxiomTypeCountMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_differentindividuals"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axtct_differentindividuals</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_disjointclasses"/>
+        <Class IRI="#AxiomTypeCountMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_disjointclasses"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axtct_disjointclasses</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_disjointobjectproperties"/>
+        <Class IRI="#AxiomTypeCountMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_disjointobjectproperties"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axtct_disjointobjectproperties</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_disjointunion"/>
+        <Class IRI="#AxiomTypeCountMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_disjointunion"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axtct_disjointunion</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_equivalentclasses"/>
+        <Class IRI="#AxiomTypeCountMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_equivalentclasses"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axtct_equivalentclasses</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_equivalentdataproperties"/>
+        <Class IRI="#AxiomTypeCountMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_equivalentdataproperties"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axtct_equivalentdataproperties</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_equivalentobjectproperties"/>
+        <Class IRI="#AxiomTypeCountMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_equivalentobjectproperties"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axtct_equivalentobjectproperties</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_functionaldataproperty"/>
+        <Class IRI="#AxiomTypeCountMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_functionaldataproperty"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axtct_functionaldataproperty</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_functionalobjectproperty"/>
+        <Class IRI="#AxiomTypeCountMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_functionalobjectproperty"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axtct_functionalobjectproperty</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_haskey"/>
+        <Class IRI="#AxiomTypeCountMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_haskey"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axtct_haskey</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_incl_asymmetricobjectproperty"/>
+        <Class IRI="#AxiomTypeCountMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_incl_asymmetricobjectproperty"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axtct_incl_asymmetricobjectproperty</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_incl_classassertion"/>
+        <Class IRI="#AxiomTypeCountMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_incl_classassertion"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axtct_incl_classassertion</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_incl_datapropertyassertion"/>
+        <Class IRI="#AxiomTypeCountMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_incl_datapropertyassertion"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axtct_incl_datapropertyassertion</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_incl_datapropertydomain"/>
+        <Class IRI="#AxiomTypeCountMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_incl_datapropertydomain"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axtct_incl_datapropertydomain</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_incl_datapropertyrange"/>
+        <Class IRI="#AxiomTypeCountMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_incl_datapropertyrange"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axtct_incl_datapropertyrange</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_incl_datatypedefinition"/>
+        <Class IRI="#AxiomTypeCountMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_incl_datatypedefinition"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axtct_incl_datatypedefinition</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_incl_differentindividuals"/>
+        <Class IRI="#AxiomTypeCountMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_incl_differentindividuals"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axtct_incl_differentindividuals</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_incl_disjointclasses"/>
+        <Class IRI="#AxiomTypeCountMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_incl_disjointclasses"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axtct_incl_disjointclasses</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_incl_disjointobjectproperties"/>
+        <Class IRI="#AxiomTypeCountMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_incl_disjointobjectproperties"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axtct_incl_disjointobjectproperties</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_incl_disjointunion"/>
+        <Class IRI="#AxiomTypeCountMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_incl_disjointunion"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axtct_incl_disjointunion</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_incl_equivalentclasses"/>
+        <Class IRI="#AxiomTypeCountMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_incl_equivalentclasses"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axtct_incl_equivalentclasses</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_incl_equivalentdataproperties"/>
+        <Class IRI="#AxiomTypeCountMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_incl_equivalentdataproperties"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axtct_incl_equivalentdataproperties</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_incl_equivalentobjectproperties"/>
+        <Class IRI="#AxiomTypeCountMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_incl_equivalentobjectproperties"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axtct_incl_equivalentobjectproperties</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_incl_functionaldataproperty"/>
+        <Class IRI="#AxiomTypeCountMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_incl_functionaldataproperty"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axtct_incl_functionaldataproperty</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_incl_functionalobjectproperty"/>
+        <Class IRI="#AxiomTypeCountMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_incl_functionalobjectproperty"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axtct_incl_functionalobjectproperty</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_incl_haskey"/>
+        <Class IRI="#AxiomTypeCountMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_incl_haskey"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axtct_incl_haskey</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_incl_inversefunctionalobjectproperty"/>
+        <Class IRI="#AxiomTypeCountMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_incl_inversefunctionalobjectproperty"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axtct_incl_inversefunctionalobjectproperty</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_incl_inverseobjectproperties"/>
+        <Class IRI="#AxiomTypeCountMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_incl_inverseobjectproperties"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axtct_incl_inverseobjectproperties</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_incl_irrefexiveobjectproperty"/>
+        <Class IRI="#AxiomTypeCountMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_incl_irrefexiveobjectproperty"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axtct_incl_irrefexiveobjectproperty</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_incl_objectpropertyassertion"/>
+        <Class IRI="#AxiomTypeCountMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_incl_objectpropertyassertion"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axtct_incl_objectpropertyassertion</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_incl_objectpropertydomain"/>
+        <Class IRI="#AxiomTypeCountMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_incl_objectpropertydomain"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axtct_incl_objectpropertydomain</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_incl_objectpropertyrange"/>
+        <Class IRI="#AxiomTypeCountMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_incl_objectpropertyrange"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axtct_incl_objectpropertyrange</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_incl_reflexiveobjectproperty"/>
+        <Class IRI="#AxiomTypeCountMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_incl_reflexiveobjectproperty"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axtct_incl_reflexiveobjectproperty</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_incl_rule"/>
+        <Class IRI="#AxiomTypeCountMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_incl_rule"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axtct_incl_rule</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_incl_sameindividual"/>
+        <Class IRI="#AxiomTypeCountMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_incl_sameindividual"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axtct_incl_sameindividual</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_incl_subclassof"/>
+        <Class IRI="#AxiomTypeCountMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_incl_subclassof"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axtct_incl_subclassof</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_incl_subdatapropertyof"/>
+        <Class IRI="#AxiomTypeCountMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_incl_subdatapropertyof"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axtct_incl_subdatapropertyof</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_incl_subobjectpropertyof"/>
+        <Class IRI="#AxiomTypeCountMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_incl_subobjectpropertyof"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axtct_incl_subobjectpropertyof</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_incl_subpropertychainof"/>
+        <Class IRI="#AxiomTypeCountMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_incl_subpropertychainof"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axtct_incl_subpropertychainof</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_incl_symmetricobjectproperty"/>
+        <Class IRI="#AxiomTypeCountMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_incl_symmetricobjectproperty"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axtct_incl_symmetricobjectproperty</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_incl_transitiveobjectproperty"/>
+        <Class IRI="#AxiomTypeCountMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_incl_transitiveobjectproperty"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axtct_incl_transitiveobjectproperty</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_inversefunctionalobjectproperty"/>
+        <Class IRI="#AxiomTypeCountMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_inversefunctionalobjectproperty"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axtct_inversefunctionalobjectproperty</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_inverseobjectproperties"/>
+        <Class IRI="#AxiomTypeCountMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_inverseobjectproperties"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axtct_inverseobjectproperties</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_irrefexiveobjectproperty"/>
+        <Class IRI="#AxiomTypeCountMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_irrefexiveobjectproperty"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axtct_irrefexiveobjectproperty</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_objectpropertyassertion"/>
+        <Class IRI="#AxiomTypeCountMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_objectpropertyassertion"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axtct_objectpropertyassertion</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_objectpropertydomain"/>
+        <Class IRI="#AxiomTypeCountMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_objectpropertydomain"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axtct_objectpropertydomain</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_objectpropertyrange"/>
+        <Class IRI="#AxiomTypeCountMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_objectpropertyrange"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axtct_objectpropertyrange</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_reflexiveobjectproperty"/>
+        <Class IRI="#AxiomTypeCountMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_reflexiveobjectproperty"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axtct_reflexiveobjectproperty</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_rule"/>
+        <Class IRI="#AxiomTypeCountMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_rule"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axtct_rule</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_sameindividual"/>
+        <Class IRI="#AxiomTypeCountMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_sameindividual"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axtct_sameindividual</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_subclassof"/>
+        <Class IRI="#AxiomTypeCountMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_subclassof"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axtct_subclassof</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_subdatapropertyof"/>
+        <Class IRI="#AxiomTypeCountMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_subdatapropertyof"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axtct_subdatapropertyof</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_subobjectpropertyof"/>
+        <Class IRI="#AxiomTypeCountMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_subobjectpropertyof"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axtct_subobjectpropertyof</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_subpropertychainof"/>
+        <Class IRI="#AxiomTypeCountMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_subpropertychainof"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axtct_subpropertychainof</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_symmetricobjectproperty"/>
+        <Class IRI="#AxiomTypeCountMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_symmetricobjectproperty"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axtct_symmetricobjectproperty</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_transitiveobjectproperty"/>
+        <Class IRI="#AxiomTypeCountMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#axtct_transitiveobjectproperty"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">axtct_transitiveobjectproperty</Literal>
         </DataHasValue>
     </SubClassOf>
     <SubClassOf>
@@ -2368,6 +3890,314 @@
         </DataHasValue>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#constr_AL"/>
+        <Class IRI="#ConstructExistsMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#constr_AL"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">constr_AL</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#constr_C"/>
+        <Class IRI="#ConstructExistsMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#constr_C"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">constr_C</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#constr_D"/>
+        <Class IRI="#ConstructExistsMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#constr_D"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">constr_D</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#constr_E"/>
+        <Class IRI="#ConstructExistsMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#constr_E"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">constr_E</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#constr_F"/>
+        <Class IRI="#ConstructExistsMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#constr_F"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">constr_F</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#constr_H"/>
+        <Class IRI="#ConstructExistsMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#constr_H"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">constr_H</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#constr_I"/>
+        <Class IRI="#ConstructExistsMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#constr_I"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">constr_I</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#constr_N"/>
+        <Class IRI="#ConstructExistsMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#constr_N"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">constr_N</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#constr_O"/>
+        <Class IRI="#ConstructExistsMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#constr_O"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">constr_O</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#constr_Q"/>
+        <Class IRI="#ConstructExistsMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#constr_Q"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">constr_Q</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#constr_R"/>
+        <Class IRI="#ConstructExistsMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#constr_R"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">constr_R</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#constr_S"/>
+        <Class IRI="#ConstructExistsMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#constr_S"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">constr_S</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#constr_TRAN"/>
+        <Class IRI="#ConstructExistsMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#constr_TRAN"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">constr_TRAN</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#constr_U"/>
+        <Class IRI="#ConstructExistsMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#constr_U"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">constr_U</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#constr_incl_AL"/>
+        <Class IRI="#ConstructExistsMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#constr_incl_AL"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">constr_incl_AL</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#constr_incl_C"/>
+        <Class IRI="#ConstructExistsMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#constr_incl_C"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">constr_incl_C</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#constr_incl_D"/>
+        <Class IRI="#ConstructExistsMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#constr_incl_D"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">constr_incl_D</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#constr_incl_E"/>
+        <Class IRI="#ConstructExistsMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#constr_incl_E"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">constr_incl_E</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#constr_incl_F"/>
+        <Class IRI="#ConstructExistsMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#constr_incl_F"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">constr_incl_F</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#constr_incl_H"/>
+        <Class IRI="#ConstructExistsMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#constr_incl_H"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">constr_incl_H</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#constr_incl_I"/>
+        <Class IRI="#ConstructExistsMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#constr_incl_I"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">constr_incl_I</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#constr_incl_N"/>
+        <Class IRI="#ConstructExistsMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#constr_incl_N"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">constr_incl_N</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#constr_incl_O"/>
+        <Class IRI="#ConstructExistsMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#constr_incl_O"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">constr_incl_O</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#constr_incl_Q"/>
+        <Class IRI="#ConstructExistsMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#constr_incl_Q"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">constr_incl_Q</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#constr_incl_R"/>
+        <Class IRI="#ConstructExistsMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#constr_incl_R"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">constr_incl_R</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#constr_incl_S"/>
+        <Class IRI="#ConstructExistsMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#constr_incl_S"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">constr_incl_S</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#constr_incl_TRAN"/>
+        <Class IRI="#ConstructExistsMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#constr_incl_TRAN"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">constr_incl_TRAN</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#constr_incl_U"/>
+        <Class IRI="#ConstructExistsMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#constr_incl_U"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">constr_incl_U</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#constructs"/>
         <Class IRI="#LogicalConstructMetric"/>
     </SubClassOf>
@@ -2920,6 +4750,116 @@
         </DataHasValue>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#ent_class_count"/>
+        <Class IRI="#Deprecated"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ent_class_count"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">ent_class_count</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ent_class_count_incl"/>
+        <Class IRI="#Deprecated"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ent_class_count_incl"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">ent_class_count_incl</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ent_dataproperty_count"/>
+        <Class IRI="#Deprecated"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ent_dataproperty_count"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">ent_dataproperty_count</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ent_dataproperty_count_incl"/>
+        <Class IRI="#Deprecated"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ent_dataproperty_count_incl"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">ent_dataproperty_count_incl</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ent_datatypes_count"/>
+        <Class IRI="#Deprecated"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ent_datatypes_count"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">ent_datatypes_count</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ent_datatypes_count_incl"/>
+        <Class IRI="#Deprecated"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ent_datatypes_count_incl"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">ent_datatypes_count_incl</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ent_indiv_count"/>
+        <Class IRI="#Deprecated"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ent_indiv_count"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">ent_indiv_count</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ent_indiv_count_incl"/>
+        <Class IRI="#Deprecated"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ent_indiv_count_incl"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">ent_indiv_count_incl</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ent_obj_property_count"/>
+        <Class IRI="#Deprecated"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ent_obj_property_count"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">ent_obj_property_count</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ent_obj_property_count_incl"/>
+        <Class IRI="#Deprecated"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ent_obj_property_count_incl"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">ent_obj_property_count_incl</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#exception"/>
         <Class IRI="#ExperimentMetadata"/>
     </SubClassOf>
@@ -3202,7 +5142,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#gci_count"/>
-        <Class IRI="#AxiomMetric"/>
+        <Class IRI="#GeneralAxiomMetric"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#gci_count"/>
@@ -3220,7 +5160,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#gci_count_incl"/>
-        <Class IRI="#AxiomMetric"/>
+        <Class IRI="#GeneralAxiomMetric"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#gci_count_incl"/>
@@ -3238,7 +5178,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#gci_hidden_count"/>
-        <Class IRI="#AxiomMetric"/>
+        <Class IRI="#GeneralAxiomMetric"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#gci_hidden_count"/>
@@ -3256,7 +5196,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#gci_hidden_count_incl"/>
-        <Class IRI="#AxiomMetric"/>
+        <Class IRI="#GeneralAxiomMetric"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#gci_hidden_count_incl"/>
@@ -3491,7 +5431,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#logical_axiom_count"/>
-        <Class IRI="#AxiomMetric"/>
+        <Class IRI="#GeneralAxiomMetric"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#logical_axiom_count"/>
@@ -3509,7 +5449,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#logical_axiom_count_incl"/>
-        <Class IRI="#AxiomMetric"/>
+        <Class IRI="#GeneralAxiomMetric"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#logical_axiom_count_incl"/>
@@ -3563,7 +5503,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#max_axiomlength"/>
-        <Class IRI="#AxiomMetric"/>
+        <Class IRI="#GeneralAxiomMetric"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#max_axiomlength"/>
@@ -3581,7 +5521,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#max_axiomlength_incl"/>
-        <Class IRI="#AxiomMetric"/>
+        <Class IRI="#GeneralAxiomMetric"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#max_axiomlength_incl"/>
@@ -4069,6 +6009,72 @@
         </DataHasValue>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#profile_owl2"/>
+        <Class IRI="#Deprecated"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#profile_owl2"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">profile_owl2</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#profile_owl2_dl"/>
+        <Class IRI="#Deprecated"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#profile_owl2_dl"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">profile_owl2_dl</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#profile_owl2_el"/>
+        <Class IRI="#Deprecated"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#profile_owl2_el"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">profile_owl2_el</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#profile_owl2_ql"/>
+        <Class IRI="#Deprecated"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#profile_owl2_ql"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">profile_owl2_ql</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#profile_owl2_rl"/>
+        <Class IRI="#Deprecated"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#profile_owl2_rl"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">profile_owl2_rl</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#profile_rdfs"/>
+        <Class IRI="#Deprecated"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#profile_rdfs"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">profile_rdfs</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#ram"/>
         <Class IRI="#MachineMetric"/>
     </SubClassOf>
@@ -4195,7 +6201,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#rbox_size"/>
-        <Class IRI="#AxiomMetric"/>
+        <Class IRI="#GeneralAxiomMetric"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#rbox_size"/>
@@ -4213,7 +6219,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#rbox_size_incl"/>
-        <Class IRI="#AxiomMetric"/>
+        <Class IRI="#GeneralAxiomMetric"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#rbox_size_incl"/>
@@ -4607,7 +6613,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#rule_ct"/>
-        <Class IRI="#AxiomMetric"/>
+        <Class IRI="#AxiomTypeCountMetric"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#rule_ct"/>
@@ -4625,7 +6631,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#rule_ct_incl"/>
-        <Class IRI="#AxiomMetric"/>
+        <Class IRI="#AxiomTypeCountMetric"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#rule_ct_incl"/>
@@ -5021,7 +7027,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#taut_count"/>
-        <Class IRI="#AxiomMetric"/>
+        <Class IRI="#GeneralAxiomMetric"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#taut_count"/>
@@ -5039,7 +7045,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#taut_count_incl"/>
-        <Class IRI="#AxiomMetric"/>
+        <Class IRI="#GeneralAxiomMetric"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#taut_count_incl"/>
@@ -5057,7 +7063,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#tbox_size"/>
-        <Class IRI="#AxiomMetric"/>
+        <Class IRI="#GeneralAxiomMetric"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#tbox_size"/>
@@ -5075,7 +7081,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#tbox_size_incl"/>
-        <Class IRI="#AxiomMetric"/>
+        <Class IRI="#GeneralAxiomMetric"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#tbox_size_incl"/>
@@ -5093,7 +7099,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#tboxrbox_size"/>
-        <Class IRI="#AxiomMetric"/>
+        <Class IRI="#GeneralAxiomMetric"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#tboxrbox_size"/>
@@ -5111,7 +7117,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#tboxrbox_size_incl"/>
-        <Class IRI="#AxiomMetric"/>
+        <Class IRI="#GeneralAxiomMetric"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#tboxrbox_size_incl"/>
@@ -5129,7 +7135,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#top_abox_axtype"/>
-        <Class IRI="#AxiomTypeMetric"/>
+        <Class IRI="#GeneralAxiomTypeMetric"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#top_abox_axtype"/>
@@ -5176,7 +7182,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#top_tbox_axtype"/>
-        <Class IRI="#AxiomMetric"/>
+        <Class IRI="#GeneralAxiomTypeMetric"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#top_tbox_axtype"/>
@@ -5423,6 +7429,369 @@
         <DataHasValue>
             <DataProperty IRI="#isMeasuredInUnit"/>
             <Literal datatypeIRI="&xsd;string"></Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#viol_datatypeirialsousedasclassiri"/>
+        <Class IRI="#ViolationExistMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#viol_datatypeirialsousedasclassiri"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">viol_datatypeirialsousedasclassiri</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#viol_illegalpunning"/>
+        <Class IRI="#ViolationExistMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#viol_illegalpunning"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">viol_illegalpunning</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#viol_insufficientindividuals"/>
+        <Class IRI="#ViolationExistMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#viol_insufficientindividuals"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">viol_insufficientindividuals</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#viol_insufficientoperands"/>
+        <Class IRI="#ViolationExistMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#viol_insufficientoperands"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">viol_insufficientoperands</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#viol_useofnonsimplepropertyinasymmetricobjectpropertyaxiom"/>
+        <Class IRI="#ViolationExistMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#viol_useofnonsimplepropertyinasymmetricobjectpropertyaxiom"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">viol_useofnonsimplepropertyinasymmetricobjectpropertyaxiom</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#viol_useofnonsimplepropertyincardinalityrestriction"/>
+        <Class IRI="#ViolationExistMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#viol_useofnonsimplepropertyincardinalityrestriction"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">viol_useofnonsimplepropertyincardinalityrestriction</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#viol_useofnonsimplepropertyinfunctionalpropertyaxiom"/>
+        <Class IRI="#ViolationExistMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#viol_useofnonsimplepropertyinfunctionalpropertyaxiom"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">viol_useofnonsimplepropertyinfunctionalpropertyaxiom</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#viol_useofnonsimplepropertyininversefunctionalobjectpropertyaxiom"/>
+        <Class IRI="#ViolationExistMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#viol_useofnonsimplepropertyininversefunctionalobjectpropertyaxiom"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">viol_useofnonsimplepropertyininversefunctionalobjectpropertyaxiom</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#viol_useofnonsimplepropertyinirreflexivepropertyaxiom"/>
+        <Class IRI="#ViolationExistMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#viol_useofnonsimplepropertyinirreflexivepropertyaxiom"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">viol_useofnonsimplepropertyinirreflexivepropertyaxiom</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#viol_useofpropertyinchaincausescycle"/>
+        <Class IRI="#ViolationExistMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#viol_useofpropertyinchaincausescycle"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">viol_useofpropertyinchaincausescycle</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#viol_useofreservedvocabularyforclassiri"/>
+        <Class IRI="#ViolationExistMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#viol_useofreservedvocabularyforclassiri"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">viol_useofreservedvocabularyforclassiri</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#viol_useofreservedvocabularyforobjectpropertyiri"/>
+        <Class IRI="#ViolationExistMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#viol_useofreservedvocabularyforobjectpropertyiri"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">viol_useofreservedvocabularyforobjectpropertyiri</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#viol_useofundeclaredclass"/>
+        <Class IRI="#ViolationExistMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#viol_useofundeclaredclass"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">viol_useofundeclaredclass</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#viol_useofundeclareddataproperty"/>
+        <Class IRI="#ViolationExistMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#viol_useofundeclareddataproperty"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">viol_useofundeclareddataproperty</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#viol_useofundeclareddatatype"/>
+        <Class IRI="#ViolationExistMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#viol_useofundeclareddatatype"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">viol_useofundeclareddatatype</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#viol_useofundeclaredobjectproperty"/>
+        <Class IRI="#ViolationExistMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#viol_useofundeclaredobjectproperty"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">viol_useofundeclaredobjectproperty</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#violct_datatypeirialsousedasclassiri"/>
+        <Class IRI="#ViolationCountMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#violct_datatypeirialsousedasclassiri"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">violct_datatypeirialsousedasclassiri</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#violct_illegalpunning"/>
+        <Class IRI="#ViolationCountMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#violct_illegalpunning"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">violct_illegalpunning</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#violct_insufficientindividuals"/>
+        <Class IRI="#ViolationCountMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#violct_insufficientindividuals"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">violct_insufficientindividuals</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#violct_insufficientoperands"/>
+        <Class IRI="#ViolationCountMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#violct_insufficientoperands"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">violct_insufficientoperands</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#violct_useofnonsimplepropertyinasymmetricobjectpropertyaxiom"/>
+        <Class IRI="#ViolationCountMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#violct_useofnonsimplepropertyinasymmetricobjectpropertyaxiom"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">violct_useofnonsimplepropertyinasymmetricobjectpropertyaxiom</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#violct_useofnonsimplepropertyincardinalityrestriction"/>
+        <Class IRI="#ViolationCountMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#violct_useofnonsimplepropertyincardinalityrestriction"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">violct_useofnonsimplepropertyincardinalityrestriction</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#violct_useofnonsimplepropertyinfunctionalpropertyaxiom"/>
+        <Class IRI="#ViolationCountMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#violct_useofnonsimplepropertyinfunctionalpropertyaxiom"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">violct_useofnonsimplepropertyinfunctionalpropertyaxiom</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#violct_useofnonsimplepropertyininversefunctionalobjectpropertyaxiom"/>
+        <Class IRI="#ViolationCountMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#violct_useofnonsimplepropertyininversefunctionalobjectpropertyaxiom"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">violct_useofnonsimplepropertyininversefunctionalobjectpropertyaxiom</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#violct_useofnonsimplepropertyinirreflexivepropertyaxiom"/>
+        <Class IRI="#ViolationCountMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#violct_useofnonsimplepropertyinirreflexivepropertyaxiom"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">violct_useofnonsimplepropertyinirreflexivepropertyaxiom</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#violct_useofpropertyinchaincausescycle"/>
+        <Class IRI="#ViolationCountMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#violct_useofpropertyinchaincausescycle"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">violct_useofpropertyinchaincausescycle</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#violct_useofreservedvocabularyforclassiri"/>
+        <Class IRI="#ViolationCountMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#violct_useofreservedvocabularyforclassiri"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">violct_useofreservedvocabularyforclassiri</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#violct_useofreservedvocabularyforobjectpropertyiri"/>
+        <Class IRI="#ViolationCountMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#violct_useofreservedvocabularyforobjectpropertyiri"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">violct_useofreservedvocabularyforobjectpropertyiri</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#violct_useofundeclaredclass"/>
+        <Class IRI="#ViolationCountMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#violct_useofundeclaredclass"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">violct_useofundeclaredclass</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#violct_useofundeclareddataproperty"/>
+        <Class IRI="#ViolationCountMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#violct_useofundeclareddataproperty"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">violct_useofundeclareddataproperty</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#violct_useofundeclareddatatype"/>
+        <Class IRI="#ViolationCountMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#violct_useofundeclareddatatype"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">violct_useofundeclareddatatype</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#violct_useofundeclaredobjectproperty"/>
+        <Class IRI="#ViolationCountMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#violct_useofundeclaredobjectproperty"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">violct_useofundeclaredobjectproperty</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#violz_total"/>
+        <Class IRI="#ViolationMetric"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#violz_total"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&xsd;string">violz_total</Literal>
         </DataHasValue>
     </SubClassOf>
     <SubObjectPropertyOf>
